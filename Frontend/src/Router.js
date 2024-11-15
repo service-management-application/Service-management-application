@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Lazy loading the components
-const Login = lazy(() => import('./Authentication/LoginPage/Login.js'));
 const Home = lazy(() => import('./ClientPages/Home/Home.js'));
 const Join = lazy(() => import('./Authentication/Join/Join.js'));
 const RegisterProvider = lazy(() => import('./Authentication/RegisterProvider/RegisterProvider.js'));
@@ -19,7 +18,8 @@ const Profile = lazy(() => import('./ClientPages/Profile/Profile.js'));
  const CategoriesManagement = lazy(() => import('./AdminPages/CategoriesManagement/CategoriesManagement.js'));
  const AdminLogin = lazy(() => import('./AdminPages/AdminLogin/AdminLogin.js'));
  const AdminProfile = lazy(() => import('./AdminPages/AdminProfile/AdminProfile.js'));
-
+ const LoginProvider = lazy(() => import('./Authentication/LoginProvider/LoginProvider.js'));
+ const LoginClient = lazy(() => import('./Authentication/LoginClient/LoginClient.js'));
 
 export default function Router() {
   return (
@@ -28,7 +28,6 @@ export default function Router() {
         <Routes>
           {/* <!-- Client Pages --> */}
           <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
           <Route path='/RegisterClient' element={<Registerclient />} />
           <Route path='/RegisterProvider' element={<RegisterProvider />} />
           <Route path='/Join' element={<Join />} />
@@ -37,7 +36,8 @@ export default function Router() {
           <Route path='Client/aboutus' element={<Aboutus />} />
           <Route path='Client/Profile' element={<Profile />} />
           <Route path='Client/Messanger' element={<Messanger />} />
-
+          <Route path='/loginProvider' element={<LoginProvider />} />
+          <Route path='/LoginClient' element={<LoginClient />} />
 
 
           {/* <!-- Admin Pages --> */}
