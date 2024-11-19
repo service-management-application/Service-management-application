@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../Components/Navbar/ClientNavbar";
 import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,11 @@ export default function Categories() {
             aria-label="Search"
             style={{ width: "250px", borderRadius: "20px" }}
           />
-          <button className="btn btn-success" type="submit" style={{ borderRadius: "20px" }}>
+          <button
+            className="btn btn-success"
+            type="submit"
+            style={{ borderRadius: "20px" }}
+          >
             Search
           </button>
         </form>
@@ -35,9 +39,13 @@ export default function Categories() {
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
                 </p>
-                <Link to="/client/ListProfilesInCat" className="btn btn-primary">
+                <Link
+                  to="/client/ProfilesListInCat"
+                  className="btn btn-primary"
+                >
                   ListEventsInCat
                 </Link>
               </div>
@@ -49,7 +57,8 @@ export default function Categories() {
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
                 </p>
                 <a href="#" className="btn btn-primary">
                   Go somewhere
@@ -63,7 +72,8 @@ export default function Categories() {
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
                 </p>
                 <a href="#" className="btn btn-primary">
                   Go somewhere
@@ -77,7 +87,8 @@ export default function Categories() {
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
                 </p>
                 <a href="#" className="btn btn-primary">
                   Go somewhere
@@ -85,8 +96,6 @@ export default function Categories() {
               </div>
             </div>
           </div>
-
-          
         </div>
       </div>
 

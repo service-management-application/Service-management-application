@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../Components/Navbar/ClientNavbar";
 import Footer from "../../Components/Footer/Footer";
 
 export default function ProfilePage() {
@@ -14,10 +14,10 @@ export default function ProfilePage() {
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb bg-light rounded-3 p-3">
                   <li className="breadcrumb-item">
-                    <Link to="client/ListProfilesInCat">Users</Link>
+                    <Link to="/client/ProfilesListInCat">Go Back</Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
-                    User Profile
+                    Provier Profile
                   </li>
                 </ol>
               </nav>
@@ -37,14 +37,14 @@ export default function ProfilePage() {
                   <p className="text-muted mb-1">Name</p>
                   <p className="text-muted mb-4">@</p>
                   <div className="d-flex justify-content-center">
-                    <Link to="/client/Messanger" className="btn btn-primary">
+                    <Link to="/client/ClientMessanger" className="btn btn-primary">
                       Message
                     </Link>
                   </div>
                 </div>
               </div>
 
-              <div className="card mt-4">
+              {/* <div className="card mt-4">
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item d-flex justify-content-between align-items-center">
                     <i className="fas fa-globe text-warning"></i>
@@ -76,7 +76,7 @@ export default function ProfilePage() {
                     <span>mdbootstrap</span>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
 
             <div className="col-lg-8">
@@ -84,7 +84,16 @@ export default function ProfilePage() {
                 <div className="card-body">
                   <div className="row">
                     <div className="col-sm-3">
-                      <p className="mb-0">Full Name</p>
+                      <p className="mb-0">First Name</p>
+                    </div>
+                    <div className="col-sm-9">
+                      <p className="text-muted mb-0">Johnatan Smith</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div className="row">
+                    <div className="col-sm-3">
+                      <p className="mb-0">Last Name</p>
                     </div>
                     <div className="col-sm-9">
                       <p className="text-muted mb-0">Johnatan Smith</p>
@@ -111,13 +120,15 @@ export default function ProfilePage() {
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
-                      <p className="mb-0">Mobile</p>
+                      <p className="mb-0">Profession</p>
                     </div>
                     <div className="col-sm-9">
-                      <p className="text-muted mb-0">(098) 765-4321</p>
+                      <p className="text-muted mb-0">Mecanical</p>
                     </div>
                   </div>
+
                   <hr />
+
                   <div className="row">
                     <div className="col-sm-3">
                       <p className="mb-0">Address</p>
@@ -126,6 +137,16 @@ export default function ProfilePage() {
                       <p className="text-muted mb-0">
                         Bay Area, San Francisco, CA
                       </p>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div className="row">
+                    <div className="col-sm-3">
+                      <p className="mb-0">Availability</p>
+                    </div>
+                    <div className="col-sm-9">
+                      <p className="text-muted mb-0">Available</p>
                     </div>
                   </div>
                 </div>
@@ -137,9 +158,11 @@ export default function ProfilePage() {
                     <div className="card-body">
                       <p className="mb-4">
                         <span className="text-primary font-italic me-1">
-                          assignment
-                        </span>{" "}
-                        Project Status
+                          Description
+                        </span>
+                        <br />
+                        <br />
+                        this is a description of the provider
                       </p>
                       {/* Add project progress details or other content here */}
                     </div>
